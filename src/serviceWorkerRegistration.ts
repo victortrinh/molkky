@@ -23,6 +23,10 @@ type Config = {
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
 };
 
+/**
+ * Register the app
+ * @param {Config} config - The app config
+ */
 export function register(config?: Config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
@@ -57,6 +61,11 @@ export function register(config?: Config) {
   }
 }
 
+/**
+ * Register valid
+ * @param {string} swUrl - The url
+ * @param {Config} config - The app config
+ */
 function registerValidSW(swUrl: string, config?: Config) {
   navigator.serviceWorker
     .register(swUrl)
@@ -101,6 +110,11 @@ function registerValidSW(swUrl: string, config?: Config) {
     });
 }
 
+/**
+ * Checks valid service worker
+ * @param {string} swUrl - The url
+ * @param {Config} config - The app config
+ */
 function checkValidServiceWorker(swUrl: string, config?: Config) {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl, {
@@ -129,6 +143,9 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
     });
 }
 
+/**
+ * Unregister application
+ */
 export function unregister() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
