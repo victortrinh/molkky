@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,0BACE,WAAY,CACZ,4CACF","file":"main.09380d86.chunk.css","sourcesContent":[".MuiBottomNavigation-root {\r\n  height: auto;\r\n  padding-bottom: env(safe-area-inset-bottom, 0);\r\n}\r\n"]}
