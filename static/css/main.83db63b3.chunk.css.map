@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,MACE,oBAAqB,CAErB,4CACF","file":"main.83db63b3.chunk.css","sourcesContent":[".test {\r\n  height: \"fit-content\";\r\n  padding-bottom: 0;\r\n  padding-bottom: env(safe-area-inset-bottom, 0);\r\n}\r\n"]}
