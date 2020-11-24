@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,MACE,cAAe,CACf,QAAS,CACT,WAAY,CACZ,4CACF,CAEA,OACE,eACF","file":"main.0b6a1be0.chunk.css","sourcesContent":[".test {\r\n  position: fixed;\r\n  bottom: 0;\r\n  width: 100vw;\r\n  padding-bottom: env(safe-area-inset-bottom, 0);\r\n}\r\n\r\n.test2 {\r\n  margin-top: 40px;\r\n}\r\n"]}
