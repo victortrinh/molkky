@@ -1,0 +1,17 @@
+.test {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: auto !important;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.test2 {
+  margin-top: env(safe-area-inset-top, 0);
+  box-shadow: none !important;
+}
+
+.test3 {
+  width: 300px;
+  margin-top: env(safe-area-inset-top, 30px);
+}
