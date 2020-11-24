@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/molkky/static/css/main.d2456d50.chunk.css",
-    "main.js": "/molkky/static/js/main.3eb4d3e6.chunk.js",
-    "main.js.map": "/molkky/static/js/main.3eb4d3e6.chunk.js.map",
+    "main.js": "/molkky/static/js/main.ab653540.chunk.js",
+    "main.js.map": "/molkky/static/js/main.ab653540.chunk.js.map",
     "runtime-main.js": "/molkky/static/js/runtime-main.a579e529.js",
     "runtime-main.js.map": "/molkky/static/js/runtime-main.a579e529.js.map",
     "static/js/2.5ab37785.chunk.js": "/molkky/static/js/2.5ab37785.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.a579e529.js",
     "static/js/2.5ab37785.chunk.js",
     "static/css/main.d2456d50.chunk.css",
-    "static/js/main.3eb4d3e6.chunk.js"
+    "static/js/main.ab653540.chunk.js"
   ]
 }
