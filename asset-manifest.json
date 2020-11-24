@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/molkky/static/css/main.a34c57c4.chunk.css",
+    "main.css": "/molkky/static/css/main.068a81e2.chunk.css",
     "main.js": "/molkky/static/js/main.3eb4d3e6.chunk.js",
     "main.js.map": "/molkky/static/js/main.3eb4d3e6.chunk.js.map",
     "runtime-main.js": "/molkky/static/js/runtime-main.a579e529.js",
@@ -12,13 +12,13 @@
     "index.html": "/molkky/index.html",
     "service-worker.js": "/molkky/service-worker.js",
     "service-worker.js.map": "/molkky/service-worker.js.map",
-    "static/css/main.a34c57c4.chunk.css.map": "/molkky/static/css/main.a34c57c4.chunk.css.map",
+    "static/css/main.068a81e2.chunk.css.map": "/molkky/static/css/main.068a81e2.chunk.css.map",
     "static/js/2.5ab37785.chunk.js.LICENSE.txt": "/molkky/static/js/2.5ab37785.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a579e529.js",
     "static/js/2.5ab37785.chunk.js",
-    "static/css/main.a34c57c4.chunk.css",
+    "static/css/main.068a81e2.chunk.css",
     "static/js/main.3eb4d3e6.chunk.js"
   ]
 }
