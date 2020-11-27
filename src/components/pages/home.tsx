@@ -1,12 +1,7 @@
-import {
-  Button,
-  Container,
-  useMediaQuery,
-  useTheme,
-} from "@12emake/design-system";
+import { Button, useMediaQuery, useTheme } from "@12emake/design-system";
 
+import { MainContainer } from "../shared/mainContainer";
 import React from "react";
-import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
@@ -15,7 +10,7 @@ const Home = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <StyledContainer>
+    <MainContainer>
       <Button
         size={isMobile ? "large" : "medium"}
         color="secondary"
@@ -23,16 +18,8 @@ const Home = () => {
       >
         {t("start game")}
       </Button>
-    </StyledContainer>
+    </MainContainer>
   );
 };
-
-const StyledContainer = styled(Container)`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
 export default Home;

@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@12emake/design-system": "^0.2.4",
+    "@12emake/design-system": "^0.2.5",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -63,6 +63,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.56",
+    "@types/react-router-dom": "^5.1.6",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
     "eslint": "^7.13.0",
@@ -70,6 +71,7 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-react": "^7.21.5",
     "gh-pages": "^3.1.0",
-    "prettier": "2.1.2"
+    "prettier": "2.1.2",
+    "react-router-dom": "^5.2.0"
   }
 }

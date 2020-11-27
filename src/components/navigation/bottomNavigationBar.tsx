@@ -8,19 +8,29 @@ import React, { ChangeEvent, useState } from "react";
 import HomeIcon from "@material-ui/icons/Home";
 import SettingsIcon from "@material-ui/icons/Settings";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const BottomNavigationBar = () => {
-  const [value, setValue] = useState(0);
+  const history = useHistory();
+  const [value, setValue] = useState("/");
   const [t] = useTranslation();
 
-  const onChange = (_: ChangeEvent<{}>, newValue: number) => setValue(newValue);
+  const onChange = (_: ChangeEvent<{}>, newValue: any) => {
+    setValue(newValue);
+    history.push(newValue);
+  };
 
   return (
     <Hidden mdUp>
       <StyledBottomNavigation value={value} onChange={onChange}>
-        <StyledBottomNavigationAction label={t("home")} icon={<HomeIcon />} />
         <StyledBottomNavigationAction
+          value="/"
+          label={t("home")}
+          icon={<HomeIcon />}
+        />
+        <StyledBottomNavigationAction
+          value="settings"
           label={t("settings")}
           icon={<SettingsIcon />}
         />
