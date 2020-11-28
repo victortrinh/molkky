@@ -2,10 +2,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { ThemeProvider, useMediaQuery } from "@12emake/design-system";
 
 import BottomNavigationBar from "./components/navigation/bottomNavigationBar";
-import Home from "./components/pages/home";
 import { NavigationBar } from "./components/navigation/navigationBar";
 import React from "react";
-import Settings from "./components/pages/settings";
+import routes from "./routes";
 import styled from "styled-components";
 
 const App = () => {
@@ -18,12 +17,11 @@ const App = () => {
       >
         <StyledContainer>
           <NavigationBar />
-
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/settings" component={Settings} />
+            {routes.map(({ key, ...props }) => (
+              <Route key={key} {...props} />
+            ))}
           </Switch>
-
           <BottomNavigationBar />
         </StyledContainer>
       </ThemeProvider>

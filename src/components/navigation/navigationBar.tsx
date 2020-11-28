@@ -58,6 +58,10 @@ const StyledNavigationBar = styled(ExternalNavigationBar)<StyledNavigationBar>`
     css`
       padding-top: env(safe-area-inset-top, 0);
       box-shadow: none !important;
+
+      img {
+        height: 35px;
+      }
     `}
 `;
 

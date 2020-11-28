@@ -1,6 +1,6 @@
 import { Button, useMediaQuery, useTheme } from "@12emake/design-system";
 
-import { MainContainer } from "../shared/mainContainer";
+import { MainContainer } from "../components/shared/mainContainer";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
