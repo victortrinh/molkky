@@ -20,12 +20,12 @@
     {
       "src": "molkky192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "safari-pinned-tab.svg",
-      "type": "image/svg",
-      "purpose": "any maskable"
+      "type": "image/svg"
     },
     {
       "src": "molkky512.png",
