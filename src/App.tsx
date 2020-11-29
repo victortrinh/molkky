@@ -1,6 +1,6 @@
 import { HashRouter, Route, Switch } from "react-router-dom";
+import { Loading, ThemeProvider, useMediaQuery } from "@12emake/design-system";
 import React, { useEffect, useState } from "react";
-import { ThemeProvider, useMediaQuery } from "@12emake/design-system";
 import { get, set } from "idb-keyval";
 
 import BottomNavigationBar from "./components/navigation/bottomNavigationBar";
@@ -12,25 +12,33 @@ import styled from "styled-components";
 
 const App = () => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  const [darkModeOn, setDarkModeOn] = useState<boolean>(prefersDarkMode);
+  const [loading, setLoading] = useState(true);
+  const [darkModeOn, setDarkModeOn] = useState(prefersDarkMode);
 
   useEffect(() => {
     get<boolean>("darkModeOn").then((value) => {
       if (value && value !== darkModeOn) {
         setDarkModeOn(value);
       }
+
+      get<string>("language").then((value) => {
+        if (i18next.language !== value) {
+          i18next.changeLanguage(value);
+        }
+
+        setLoading(false);
+      });
     });
-    get<string>("language").then((value) => {
-      if (i18next.language !== value) {
-        i18next.changeLanguage(value);
-      }
-    });
-  }, [setDarkModeOn]);
+  }, [setDarkModeOn, setLoading]);
 
   const toggleDarkModeOn = () => {
     setDarkModeOn(!darkModeOn);
     set("darkModeOn", !darkModeOn);
   };
+
+  if (loading) {
+    <Loading open />;
+  }
 
   return (
     <ThemeProvider theme={darkModeOn ? "darkUnderTheLake" : "underTheLake"}>
