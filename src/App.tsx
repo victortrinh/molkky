@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { ThemeProvider, useMediaQuery } from "@12emake/design-system";
 import { get, set } from "idb-keyval";
@@ -34,7 +34,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={darkModeOn ? "darkUnderTheLake" : "underTheLake"}>
-      <BrowserRouter basename="molkky">
+      <HashRouter>
         <StyledContainer>
           <NavigationBar />
           <Switch>
@@ -54,7 +54,7 @@ const App = () => {
           </Switch>
           <BottomNavigationBar />
         </StyledContainer>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 };
