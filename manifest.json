@@ -20,17 +20,18 @@
     {
       "src": "molkky192.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "android-chrome-192x192.png",
-      "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
+      "src": "android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
       "src": "safari-pinned-tab.svg",
-      "type": "image/svg"
+      "type": "image/svg",
+      "purpose": "any maskable"
     },
     {
       "src": "molkky512.png",
