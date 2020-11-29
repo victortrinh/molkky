@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@12emake/design-system": "^0.2.5",
+    "@12emake/design-system": "^0.2.11",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -15,6 +15,9 @@
     "@types/styled-components": "^5.1.4",
     "clsx": "^1.1.1",
     "i18next": "^19.8.4",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-xhr-backend": "^3.2.2",
+    "idb-keyval": "^3.2.0",
     "json-loader": "^0.5.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

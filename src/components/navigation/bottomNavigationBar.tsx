@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 
 const BottomNavigationBar = () => {
   const history = useHistory();
-  const [value, setValue] = useState("/");
+  const [value, setValue] = useState(history.location.pathname);
   const [t] = useTranslation();
 
   const onChange = (_: ChangeEvent<{}>, newValue: any) => {
@@ -30,7 +30,7 @@ const BottomNavigationBar = () => {
           icon={<HomeIcon />}
         />
         <StyledBottomNavigationAction
-          value="settings"
+          value="/settings"
           label={t("settings")}
           icon={<SettingsIcon />}
         />

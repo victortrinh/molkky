@@ -2,6 +2,9 @@
   "translation": {
     "login": "Connexion",
     "start game": "Commencer un jeu de molkky",
-    "home": "Accueil"
+    "home": "Accueil",
+    "language": "Langue",
+    "settings": "Paramètres",
+    "dark-mode": "Mode sombre"
   }
 }

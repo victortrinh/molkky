@@ -1,7 +1,7 @@
 import { Route } from "./route";
 import home from "./pages/home";
-import settings from "./pages/settings";
+import notFound from "./pages/notFound";
 
-const routes: Route[] = [home, settings];
+const routes: Route[] = [home, notFound];
 
 export default routes;

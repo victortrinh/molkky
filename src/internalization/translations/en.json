@@ -2,6 +2,9 @@
   "translation": {
     "login": "Login",
     "start game": "Start a molkky game",
-    "home": "Home"
+    "home": "Home",
+    "language": "Language",
+    "settings": "Settings",
+    "dark-mode": "Dark mode"
   }
 }

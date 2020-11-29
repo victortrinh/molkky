@@ -1,6 +1,6 @@
 {
-  "short_name": "Molkky",
-  "name": "Mollky scoring system",
+  "short_name": "Mölkky",
+  "name": "Mölkky scoring system",
   "icons": [
     {
       "src": "favicon-16x16.ico",
@@ -20,6 +20,12 @@
     {
       "src": "molkky192.png",
       "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "android-chrome-192x192.png",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
@@ -35,6 +41,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#002447",
+  "background_color": "#002447"
 }

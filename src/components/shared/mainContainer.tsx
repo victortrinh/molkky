@@ -1,16 +1,30 @@
+import styled, { css } from "styled-components";
+
 import { Container } from "@12emake/design-system";
 import { ContainerProps } from "@12emake/design-system/dist/components/layout/container";
 import React from "react";
-import styled from "styled-components";
 
-export const MainContainer: React.FunctionComponent<ContainerProps> = (
-  props
-) => <StyledContainer {...props} />;
+export const MainContainer: React.FunctionComponent<
+  ContainerProps & StyledContainerProps
+> = (props) => <StyledContainer {...props} />;
 
-const StyledContainer = styled(Container)`
+type StyledContainerProps = {
+  $disableCentered?: boolean;
+};
+
+const StyledContainer = styled(Container)<StyledContainerProps>`
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: calc(env(safe-area-inset-top, -80px) + 80px);
+  padding-bottom: calc(env(safe-area-inset-bottom, -80px) + 80px);
+
+  ${(props) =>
+    !props.$disableCentered &&
+    css`
+      padding-top: 0;
+      padding-bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `}
 `;

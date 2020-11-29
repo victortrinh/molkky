@@ -8,6 +8,7 @@ import {
 } from "@12emake/design-system";
 import styled, { css } from "styled-components";
 
+import { Link } from "react-router-dom";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -28,12 +29,19 @@ export const NavigationBar = () => {
     >
       <Toolbar>
         <StyledLogoContainer>
-          <img
-            src={`${process.env.PUBLIC_URL}/${LOGO_IMAGE_NAME}`}
-            alt={t("home")}
-          />
+          <Link to="/">
+            <img
+              src={`${process.env.PUBLIC_URL}/${LOGO_IMAGE_NAME}`}
+              alt={t("home")}
+            />
+          </Link>
         </StyledLogoContainer>
         <Hidden smDown>
+          <StyledLink to="/settings">
+            <Button color="inherit" variant="text">
+              {t("settings")}
+            </Button>
+          </StyledLink>
           <Button color="inherit" variant="text">
             {t("login")}
           </Button>
@@ -42,6 +50,12 @@ export const NavigationBar = () => {
     </StyledNavigationBar>
   );
 };
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  margin-right: 20px;
+  color: white !important;
+`;
 
 type StyledNavigationBar = {
   $isMobile: boolean;
@@ -68,4 +82,8 @@ const StyledNavigationBar = styled(ExternalNavigationBar)<StyledNavigationBar>`
 const StyledLogoContainer = styled.div`
   display: flex;
   flex: 1;
+
+  a {
+    display: flex;
+  }
 `;
