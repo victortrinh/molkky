@@ -18,6 +18,7 @@ import FormatPaintIcon from "@material-ui/icons/FormatPaint";
 import LanguageIcon from "@material-ui/icons/Language";
 import { MainContainer } from "../components/shared/mainContainer";
 import i18next from "i18next";
+import { set } from "idb-keyval";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
@@ -38,7 +39,9 @@ const Settings: React.FC<SettingsProps> = ({
   };
 
   const changeLanguage = (event: MouseEvent<HTMLLIElement>) => {
-    i18next.changeLanguage(event.currentTarget.id);
+    const language = event.currentTarget.id;
+    i18next.changeLanguage(language);
+    set("language", language);
     setOpenLanguageCollapse(false);
   };
 

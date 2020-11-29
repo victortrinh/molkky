@@ -6,6 +6,7 @@ import { get, set } from "idb-keyval";
 import BottomNavigationBar from "./components/navigation/bottomNavigationBar";
 import { NavigationBar } from "./components/navigation/navigationBar";
 import Settings from "./pages/settings";
+import i18next from "i18next";
 import routes from "./routes";
 import styled from "styled-components";
 
@@ -17,6 +18,11 @@ const App = () => {
     get<boolean>("darkModeOn").then((value) => {
       if (value && value !== darkModeOn) {
         setDarkModeOn(value);
+      }
+    });
+    get<string>("language").then((value) => {
+      if (i18next.language !== value) {
+        i18next.changeLanguage(value);
       }
     });
   }, [setDarkModeOn]);
