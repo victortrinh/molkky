@@ -1,10 +1,14 @@
 {
   "translation": {
-    "login": "Connexion",
-    "start game": "Commencer un jeu de molkky",
+    "start game": "Commencer",
     "home": "Accueil",
     "language": "Langue",
     "settings": "Paramètres",
-    "dark-mode": "Mode sombre"
+    "dark-mode": "Mode sombre",
+    "go-back": "Retour à la page d'accueil",
+    "not-found": "On dirait que vous avez raté votre coup, comme vous le faîtes toujours à mölkky. C'est correct, revenez à l'arrière et nous garderons ça secret.",
+    "cancel-game": "Terminer le jeu",
+    "reset-game": "Réinitialiser le score",
+    "start-game": "Commencer le jeu"
   }
 }

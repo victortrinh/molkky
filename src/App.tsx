@@ -1,13 +1,15 @@
 import { HashRouter, Route, Switch } from "react-router-dom";
-import { Loading, ThemeProvider, useMediaQuery } from "@12emake/design-system";
 import React, { useEffect, useState } from "react";
-import { get, set } from "idb-keyval";
+import { ThemeProvider, useMediaQuery } from "@12emake/design-system";
+import { getDarkMode, setDarkMode } from "./storage/darkModeOn";
 
 import BottomNavigationBar from "./components/navigation/bottomNavigationBar";
 import { NavigationBar } from "./components/navigation/navigationBar";
 import Settings from "./pages/settings";
+import { getLanguage } from "./storage/language";
 import i18next from "i18next";
 import routes from "./routes";
+import settings from "./routes/pages/settings";
 import styled from "styled-components";
 
 const App = () => {
@@ -16,12 +18,12 @@ const App = () => {
   const [darkModeOn, setDarkModeOn] = useState(prefersDarkMode);
 
   useEffect(() => {
-    get<boolean>("darkModeOn").then((value) => {
+    getDarkMode().then((value) => {
       if (value && value !== darkModeOn) {
         setDarkModeOn(value);
       }
 
-      get<string>("language").then((value) => {
+      getLanguage().then((value) => {
         if (i18next.language !== value) {
           i18next.changeLanguage(value);
         }
@@ -33,11 +35,11 @@ const App = () => {
 
   const toggleDarkModeOn = () => {
     setDarkModeOn(!darkModeOn);
-    set("darkModeOn", !darkModeOn);
+    setDarkMode(!darkModeOn);
   };
 
   if (loading) {
-    <Loading open />;
+    return null;
   }
 
   return (
@@ -48,7 +50,7 @@ const App = () => {
           <Switch>
             <Route
               exact
-              path="/settings"
+              path={settings.path}
               render={() => (
                 <Settings
                   darkModeOn={darkModeOn}

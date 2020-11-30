@@ -9,7 +9,9 @@ import {
 import styled, { css } from "styled-components";
 
 import { Link } from "react-router-dom";
+import { NoDecorationLink } from "../shared/noDecorationLink";
 import React from "react";
+import SettingsIcon from "@material-ui/icons/Settings";
 import { useTranslation } from "react-i18next";
 
 const LOGO_IMAGE_NAME = "molkky.svg";
@@ -29,32 +31,35 @@ export const NavigationBar = () => {
     >
       <Toolbar>
         <StyledLogoContainer>
-          <Link to="/">
+          <Hidden mdUp>
             <img
               src={`${process.env.PUBLIC_URL}/${LOGO_IMAGE_NAME}`}
               alt={t("home")}
             />
-          </Link>
+          </Hidden>
+          <Hidden smDown>
+            <Link to="/">
+              <img
+                src={`${process.env.PUBLIC_URL}/${LOGO_IMAGE_NAME}`}
+                alt={t("home")}
+              />
+            </Link>
+          </Hidden>
         </StyledLogoContainer>
         <Hidden smDown>
           <StyledLink to="/settings">
-            <Button color="inherit" variant="text">
+            <Button startIcon={<SettingsIcon />} color="inherit" variant="text">
               {t("settings")}
             </Button>
           </StyledLink>
-          <Button color="inherit" variant="text">
-            {t("login")}
-          </Button>
         </Hidden>
       </Toolbar>
     </StyledNavigationBar>
   );
 };
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
+const StyledLink = styled(NoDecorationLink)`
   margin-right: 20px;
-  color: white !important;
 `;
 
 type StyledNavigationBar = {

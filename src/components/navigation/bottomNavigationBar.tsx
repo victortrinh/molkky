@@ -4,16 +4,21 @@ import {
   Hidden,
 } from "@12emake/design-system";
 import React, { ChangeEvent, useState } from "react";
+import { useHistory, useLocation } from "react-router-dom";
 
 import HomeIcon from "@material-ui/icons/Home";
+import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
 import SettingsIcon from "@material-ui/icons/Settings";
+import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
+import home from "../../routes/pages/home";
+import settings from "../../routes/pages/settings";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const BottomNavigationBar = () => {
   const history = useHistory();
-  const [value, setValue] = useState(history.location.pathname);
+  const location = useLocation();
+  const [value, setValue] = useState(location.pathname);
   const [t] = useTranslation();
 
   const onChange = (_: ChangeEvent<{}>, newValue: any) => {
@@ -25,14 +30,20 @@ const BottomNavigationBar = () => {
     <Hidden mdUp>
       <StyledBottomNavigation value={value} onChange={onChange}>
         <StyledBottomNavigationAction
-          value="/"
+          value={home.path}
           label={t("home")}
-          icon={<HomeIcon />}
+          icon={home.path === value ? <HomeIcon /> : <HomeOutlinedIcon />}
         />
         <StyledBottomNavigationAction
-          value="/settings"
+          value={settings.path}
           label={t("settings")}
-          icon={<SettingsIcon />}
+          icon={
+            settings.path === value ? (
+              <SettingsIcon />
+            ) : (
+              <SettingsOutlinedIcon />
+            )
+          }
         />
       </StyledBottomNavigation>
     </Hidden>

@@ -9,21 +9,20 @@ export const MainContainer: React.FunctionComponent<
 > = (props) => <StyledContainer {...props} />;
 
 type StyledContainerProps = {
-  $disableCentered?: boolean;
+  $centered?: boolean;
 };
 
 const StyledContainer = styled(Container)<StyledContainerProps>`
   width: 100%;
   height: 100%;
-  padding-top: calc(env(safe-area-inset-top, -80px) + 80px);
-  padding-bottom: calc(env(safe-area-inset-bottom, -80px) + 80px);
+  display: flex;
+  flex-direction: column;
+  padding-top: calc(env(safe-area-inset-top, -100px) + 100px);
+  padding-bottom: calc(env(safe-area-inset-bottom, -100px) + 100px);
 
   ${(props) =>
-    !props.$disableCentered &&
+    props.$centered &&
     css`
-      padding-top: 0;
-      padding-bottom: 0;
-      display: flex;
       justify-content: center;
       align-items: center;
     `}

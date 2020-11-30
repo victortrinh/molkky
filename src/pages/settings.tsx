@@ -18,7 +18,7 @@ import FormatPaintIcon from "@material-ui/icons/FormatPaint";
 import LanguageIcon from "@material-ui/icons/Language";
 import { MainContainer } from "../components/shared/mainContainer";
 import i18next from "i18next";
-import { set } from "idb-keyval";
+import { setLanguage } from "../storage/language";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
@@ -41,14 +41,14 @@ const Settings: React.FC<SettingsProps> = ({
   const changeLanguage = (event: MouseEvent<HTMLLIElement>) => {
     const language = event.currentTarget.id;
     i18next.changeLanguage(language);
-    set("language", language);
+    setLanguage(language);
     setOpenLanguageCollapse(false);
   };
 
   return (
-    <MainContainer $disableCentered>
+    <MainContainer>
       <Grid container justify="center" alignItems="center">
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={12} md={6}>
           <StyledList
             subheader={<ListSubheader>{t("settings")}</ListSubheader>}
           >
