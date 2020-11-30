@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.js": "/molkky/static/js/main.5c6f0df8.chunk.js",
-    "main.js.map": "/molkky/static/js/main.5c6f0df8.chunk.js.map",
-    "runtime-main.js": "/molkky/static/js/runtime-main.2b3f7cea.js",
-    "runtime-main.js.map": "/molkky/static/js/runtime-main.2b3f7cea.js.map",
-    "static/js/2.b3325212.chunk.js": "/molkky/static/js/2.b3325212.chunk.js",
-    "static/js/2.b3325212.chunk.js.map": "/molkky/static/js/2.b3325212.chunk.js.map",
-    "static/js/3.6d667a2c.chunk.js": "/molkky/static/js/3.6d667a2c.chunk.js",
-    "static/js/3.6d667a2c.chunk.js.map": "/molkky/static/js/3.6d667a2c.chunk.js.map",
+    "main.js": "/molkky/static/js/main.f8c81d5f.chunk.js",
+    "main.js.map": "/molkky/static/js/main.f8c81d5f.chunk.js.map",
+    "runtime-main.js": "/molkky/static/js/runtime-main.df102fa4.js",
+    "runtime-main.js.map": "/molkky/static/js/runtime-main.df102fa4.js.map",
+    "static/js/2.e916911c.chunk.js": "/molkky/static/js/2.e916911c.chunk.js",
+    "static/js/2.e916911c.chunk.js.map": "/molkky/static/js/2.e916911c.chunk.js.map",
+    "static/js/3.6c1578af.chunk.js": "/molkky/static/js/3.6c1578af.chunk.js",
+    "static/js/3.6c1578af.chunk.js.map": "/molkky/static/js/3.6c1578af.chunk.js.map",
     "index.html": "/molkky/index.html",
     "service-worker.js": "/molkky/service-worker.js",
     "service-worker.js.map": "/molkky/service-worker.js.map",
-    "static/js/2.b3325212.chunk.js.LICENSE.txt": "/molkky/static/js/2.b3325212.chunk.js.LICENSE.txt"
+    "static/js/2.e916911c.chunk.js.LICENSE.txt": "/molkky/static/js/2.e916911c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2b3f7cea.js",
-    "static/js/2.b3325212.chunk.js",
-    "static/js/main.5c6f0df8.chunk.js"
+    "static/js/runtime-main.df102fa4.js",
+    "static/js/2.e916911c.chunk.js",
+    "static/js/main.f8c81d5f.chunk.js"
   ]
 }
