@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/molkky/static/js/main.d6514d95.chunk.js",
-    "main.js.map": "/molkky/static/js/main.d6514d95.chunk.js.map",
+    "main.js": "/molkky/static/js/main.dc2f7c45.chunk.js",
+    "main.js.map": "/molkky/static/js/main.dc2f7c45.chunk.js.map",
     "runtime-main.js": "/molkky/static/js/runtime-main.df102fa4.js",
     "runtime-main.js.map": "/molkky/static/js/runtime-main.df102fa4.js.map",
     "static/js/2.c5c94da9.chunk.js": "/molkky/static/js/2.c5c94da9.chunk.js",
@@ -16,6 +16,6 @@
   "entrypoints": [
     "static/js/runtime-main.df102fa4.js",
     "static/js/2.c5c94da9.chunk.js",
-    "static/js/main.d6514d95.chunk.js"
+    "static/js/main.dc2f7c45.chunk.js"
   ]
 }
