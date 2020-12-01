@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAQA,gBAHE,WAOF,CAJA,MAEE,YAAa,CACb,qBACF","file":"main.ed8956ec.chunk.css","sourcesContent":["html {\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  height: 100%;\r\n}\r\n\r\n#root {\r\n  height: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n"]}
