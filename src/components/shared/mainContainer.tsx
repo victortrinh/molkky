@@ -13,12 +13,12 @@ type StyledContainerProps = {
 };
 
 const StyledContainer = styled(Container)<StyledContainerProps>`
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: calc(env(safe-area-inset-top, -100px) + 100px);
-  padding-bottom: calc(env(safe-area-inset-bottom, -100px) + 100px);
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   ${(props) =>
     props.$centered &&

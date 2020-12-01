@@ -28,7 +28,11 @@ const BottomNavigationBar = () => {
 
   return (
     <Hidden mdUp>
-      <StyledBottomNavigation value={value} onChange={onChange}>
+      <StyledBottomNavigation
+        component="footer"
+        value={value}
+        onChange={onChange}
+      >
         <StyledBottomNavigationAction
           value={home.path}
           label={t("home")}
@@ -51,8 +55,7 @@ const BottomNavigationBar = () => {
 };
 
 const StyledBottomNavigation = styled(BottomNavigation)`
-  position: fixed;
-  bottom: 0;
+  position: static;
   width: 100vw;
   height: calc(env(safe-area-inset-bottom, -60px) + 60px);
 `;

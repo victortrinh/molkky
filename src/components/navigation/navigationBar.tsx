@@ -23,7 +23,7 @@ export const NavigationBar = () => {
 
   return (
     <StyledNavigationBar
-      position="fixed"
+      position="static"
       color={isMobile ? "transparent" : "primary"}
       $isMobile
       $primarycolor={theme.palette.primary.main}

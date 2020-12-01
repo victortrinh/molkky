@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 import { Button } from "@12emake/design-system";
 import ClearIcon from "@material-ui/icons/Clear";
+import { DefaultButton } from "./shared/defaultButton";
 import FlagIcon from "@material-ui/icons/Flag";
 import { Game as GameType } from "../storage/game";
 import { MainContainer } from "../components/shared/mainContainer";
@@ -22,15 +23,15 @@ export const Game: React.FC<GameProps> = ({ game, isMobile, resetGame }) => {
     <MainContainer $centered={!isMobile}>
       <StyledGamePage $isMobile={isMobile}>Game</StyledGamePage>
       <StyledButtonGroup $isMobile={isMobile}>
-        <Button
-          color="primary"
+        <DefaultButton
+          color="secondary"
           fullWidth={isMobile}
           onClick={resetGame}
           size={isMobile ? "large" : "medium"}
           startIcon={<ClearIcon />}
         >
           {t("cancel-game")}
-        </Button>
+        </DefaultButton>
         {game.started ? (
           <Button
             color="secondary"
@@ -42,15 +43,15 @@ export const Game: React.FC<GameProps> = ({ game, isMobile, resetGame }) => {
             {t("reset-game")}
           </Button>
         ) : (
-          <Button
-            color="secondary"
+          <DefaultButton
+            color="primary"
             fullWidth={isMobile}
             onClick={resetGame}
             size={isMobile ? "large" : "medium"}
             startIcon={<FlagIcon />}
           >
             {t("start-game")}
-          </Button>
+          </DefaultButton>
         )}
       </StyledButtonGroup>
     </MainContainer>

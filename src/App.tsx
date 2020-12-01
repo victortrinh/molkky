@@ -16,21 +16,33 @@ const App = () => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const [loading, setLoading] = useState(true);
   const [darkModeOn, setDarkModeOn] = useState(prefersDarkMode);
+  const [height, setHeight] = React.useState(window.innerHeight);
 
   useEffect(() => {
-    getDarkMode().then((value) => {
-      if (value && value !== darkModeOn) {
-        setDarkModeOn(value);
-      }
+    const handleResize = () => setHeight(window.innerHeight);
 
-      getLanguage().then((value) => {
-        if (i18next.language !== value) {
-          i18next.changeLanguage(value);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
+  useEffect(() => {
+    getDarkMode()
+      .then((value) => {
+        if (value && value !== darkModeOn) {
+          setDarkModeOn(value);
         }
-
-        setLoading(false);
-      });
-    });
+      })
+      .then(() =>
+        getLanguage().then((value) => {
+          if (i18next.language !== value) {
+            i18next.changeLanguage(value);
+          }
+        })
+      )
+      .then(() => setLoading(false));
   }, [setDarkModeOn, setLoading]);
 
   const toggleDarkModeOn = () => {
@@ -45,7 +57,7 @@ const App = () => {
   return (
     <ThemeProvider theme={darkModeOn ? "darkUnderTheLake" : "underTheLake"}>
       <HashRouter>
-        <StyledContainer>
+        <StyledContainer $height={height}>
           <NavigationBar />
           <Switch>
             <Route
@@ -69,9 +81,15 @@ const App = () => {
   );
 };
 
-const StyledContainer = styled.div`
-  height: 100vh;
-  width: 100vw;
+type StyledContainerProps = {
+  $height: number;
+};
+
+const StyledContainer = styled.div<StyledContainerProps>`
+  height: ${(props) => `calc(env(safe-area-inset-top) + ${props.$height}px)`};
+  display: flex;
+  flex-direction: column;
+  touch-action: none;
 `;
 
 export default App;

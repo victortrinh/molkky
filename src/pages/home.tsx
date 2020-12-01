@@ -1,4 +1,9 @@
-import { Button, useMediaQuery, useTheme } from "@12emake/design-system";
+import {
+  Button,
+  Loading,
+  useMediaQuery,
+  useTheme,
+} from "@12emake/design-system";
 import {
   Game as GameType,
   deleteGame,
@@ -14,20 +19,16 @@ import { MainContainer } from "../components/shared/mainContainer";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
-  const [game, setGame] = useState<GameType | undefined>();
+  const [game, setGame] = useState<GameType | undefined>(undefined);
   const [loading, setLoading] = useState(true);
   const [t] = useTranslation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   useEffect(() => {
-    getGame().then((value) => {
-      if (value) {
-        setGame(value);
-      }
-
-      setLoading(false);
-    });
+    getGame()
+      .then((value) => setGame(value ?? undefined))
+      .then(() => setLoading(false));
   }, [setGame]);
 
   const startGame = () => {
@@ -44,7 +45,11 @@ const Home = () => {
   };
 
   if (loading) {
-    return null;
+    return (
+      <MainContainer $centered={!isMobile}>
+        <Loading open />
+      </MainContainer>
+    );
   }
 
   if (game) {

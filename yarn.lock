@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@12emake/design-system@^0.2.12":
-  version "0.2.12"
-  resolved "https://registry.yarnpkg.com/@12emake/design-system/-/design-system-0.2.12.tgz#c078ab8433ed204b7e60d59635c3a9de3573bbd6"
-  integrity sha512-xEhdgvJmBYsGc+YeUXmoNkkTT/UqBmCYGIQSA5F7llCoNPp6RInb2n3GZrjLbwNlc79wmVi/kM/LgqcYcKVrYg==
+"@12emake/design-system@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@12emake/design-system/-/design-system-0.3.1.tgz#8039e99097e6295a6934e247024ac2e4dbe08141"
+  integrity sha512-sPQCnmJ7EjeeGAVydH+z0FEdk5aLhXTVPcgOhJjtM54Nxu0fe2nFdUWI9CewYhMs3ZRXaojFYyytdUktz4UB/g==
   dependencies:
     "@material-ui/core" "^4.11.0"
     "@material-ui/icons" "^4.9.1"
