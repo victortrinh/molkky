@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 
+import { AddPlayers } from "./addPlayers";
 import { Button } from "@12emake/design-system";
 import ClearIcon from "@material-ui/icons/Clear";
 import { DefaultButton } from "./shared/defaultButton";
@@ -20,8 +21,12 @@ export const Game: React.FC<GameProps> = ({ game, isMobile, resetGame }) => {
   const [t] = useTranslation();
 
   return (
-    <MainContainer $centered={!isMobile}>
-      <StyledGamePage $isMobile={isMobile}>Game</StyledGamePage>
+    <MainContainer>
+      <StyledGamePage $isMobile={isMobile}>
+        <h1>Game</h1>
+        <br />
+        <AddPlayers />
+      </StyledGamePage>
       <StyledButtonGroup $isMobile={isMobile}>
         <DefaultButton
           color="secondary"
@@ -71,6 +76,8 @@ const StyledGamePage = styled.div<StyledProps>`
 `;
 
 const StyledButtonGroup = styled.div<StyledProps>`
+  padding: 30px 0;
+
   ${(props) =>
     !props.$isMobile &&
     css`

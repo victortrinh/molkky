@@ -58,7 +58,9 @@ const Home = () => {
 
   return (
     <MainContainer $centered={!isMobile}>
-      <StyledHomePage $isMobile={isMobile}>Home</StyledHomePage>
+      <StyledHomePage $isMobile={isMobile}>
+        <h1>Home</h1>
+      </StyledHomePage>
       <div>
         <Button
           size={isMobile ? "large" : "medium"}
